@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+        </style>
+        <style>
+            #gfont {
+                font-family: 'Rampart One', cursive;
+                font-size: 3em;
+            }
+
+            .sticky {
+                position: fixed;
+                top: 0;
+                width: 100%;
+            }
+
+            body {
+                text-align: center;
+                background: url('img/background.jpg');
+                background-size: cover;
+            }
+
+            .column-4 {
+                float: left;
+                width: 25%;
+                padding: 20px;
+                margin: 30px;
+                height: 250px;
+            }
+
+            .tile-1 {
+                background-color: #ffafcc;
+            }
+
+            .tile-2 {
+                background-color: #a2d2ff;
+            }
+
+            .tile-3 {
+                background-color: #dc2f02;
+            }
+
+            .tile-4 {
+                background-color: #ffba08;
+            }
+
+            .tile-5 {
+                background-color: #81b29a;
+            }
+
+            .tile-6 {
+                background-color: #f0efeb;
+            }
+
+            .tile-text {
+                text-align: center;
+                font-size: 50px;
+            }
+        </style>
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h1 id="gfont" class="head">Awesome Colorful Tiles</h1>
+        <div class="column-4 tile-1">
+            <h2 class="tile-text">TILE<br>1</h2>
+        </div>
+        <div class="column-4 tile-2">
+            <h2 class="tile-text">TILE<br>2</h2>
+        </div>
+        <div class="column-4 tile-3">
+            <h2 class="tile-text">TILE<br>3</h2>
+        </div>
+        <div class="column-4 tile-4">
+            <h2 class="tile-text">TILE<br>4</h2>
+        </div>
+        <div class="column-4 tile-5">
+            <h2 class="tile-text">TILE<br>5</h2>
+        </div>
+        <div class="column-4 tile-6">
+            <h2 class="tile-text">TILE<br>6</h2>
+        </div>
+        <script>
+            window.onscroll = function () { myFunction() };
+
+            var header = document.getElementById("gfont");
+            var sticky = header.offsetTop;
+
+            function myFunction() {
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                } else {
+                    header.classList.remove("sticky");
+                }
+            }
+        </script>
+    </body>
+
+</html>
